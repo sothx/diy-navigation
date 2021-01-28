@@ -26,6 +26,13 @@ export const GlobalLayoutsStyle = styled.div`
     }
     .header-main-center{
       flex: 1 1 0%;
+      .ant-menu-horizontal{
+        border-bottom:0;
+        line-height:47px;
+      }
+      /* .ant-menu{
+        height:47px;
+      } */
     }
     .header-main-right{
       .user-card{
