@@ -1,0 +1,31 @@
+// out: false
+
+// 滚动条样式重置
+*::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 2px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+*::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #3489f8;
+  background: #535353;
+}
+*::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ededed;
+}
+
+// 重置搜索栏
+.ant-input-affix-wrapper,.ant-input{
+  background-color: rgba(255,255,255,0.6);
+}
+.ant-input{
+  background-color: rgba(255,255,255,0);
+}
+
+// 重置网站导航

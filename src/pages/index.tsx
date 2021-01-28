@@ -6,6 +6,8 @@ import { MainContainer } from './style';
 
 import { GoogleOutlined } from '@ant-design/icons';
 
+import IconFont from '@/components/IconFont';
+
 
 const { Search } = Input;
 
@@ -28,7 +30,22 @@ const index =  () => {
   ];
 
   const contentList : any = {
-    tab1: <p>content1</p>,
+    tab1: (
+      <div>
+        <div className="img-wrapper" style={{display: 'inline-block'}}>
+          <img alt="" width="280" height="140" src="https://cdn.max-c.com/heybox/game/header/1468810_hDKT3.jpg" />
+          <h3>鬼谷八荒</h3>
+        </div>
+        {/* <div className="img-wrapper" style={{display: 'inline-block'}}>
+          <img alt="" width="280" height="140" src="https://cdn.max-c.com/heybox/game/header/1468810_hDKT3.jpg" />
+          <h3>鬼谷八荒</h3>
+        </div>
+        <div className="img-wrapper" style={{display: 'inline-block'}}>
+          <img alt="" width="280" height="140" src="https://cdn.max-c.com/heybox/game/header/1468810_hDKT3.jpg" />
+          <h3>鬼谷八荒</h3>
+        </div> */}
+      </div>
+    ),
     tab2: <p>content2</p>,
   };
   
@@ -62,15 +79,21 @@ const index =  () => {
   };
 
   const menu = (
-    <Menu>
+    <Menu className="searchMenu">
       <Menu.Item>
-        <GoogleOutlined style={{color: '#40a9ff'}} />百度搜索
+      <IconFont
+            type="iconbaidu"
+            style={{ fontSize: '12px' }}
+          />百度
       </Menu.Item>
       <Menu.Item>
-        <GoogleOutlined style={{color: '#40a9ff'}} />谷歌搜索
+        <GoogleOutlined style={{color: '#40a9ff'}} />Google
       </Menu.Item>
       <Menu.Item>
-        <Link href="https://ant.design" target="_blank"><GoogleOutlined style={{color: '#40a9ff'}} />必应搜索</Link>
+        <IconFont
+            type="iconBing"
+            style={{ fontSize: '12px' }}
+          />Bing
       </Menu.Item>
     </Menu>
   );
@@ -82,7 +105,7 @@ const index =  () => {
         placeholder=""
         allowClear
         className="serachInput"
-        enterButton="百度搜索"
+        enterButton="搜索网页"
           prefix={
             <Dropdown placement="bottomCenter" overlay={menu}>
               <GoogleOutlined onClick={() => { message.success('click ok') }} style={{color: '#40a9ff'}} />
