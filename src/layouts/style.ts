@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-import bgImg from '@/assets/home/bg.jpg';
+import { globalSetting } from '../config/navigation.config';
+
+const bgImage = globalSetting.bgImage || '';
 
 export const GlobalLayoutsStyle = styled.div`
   width: 100%;
   height: 100%;
   .ant-layout {
-    background-image: url(${bgImg});
+    ${bgImage ? `background-image: url(${bgImage});` : null}
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;

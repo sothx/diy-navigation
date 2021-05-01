@@ -10,6 +10,8 @@ import {
 
 import * as indexStyles from './style';
 
+import { globalSetting } from '../config/navigation.config';
+
 const { Header, Footer, Sider, Content } = Layout;
 
 const { SubMenu } = Menu;
@@ -37,34 +39,38 @@ export default function GlobalLayout({
 
   const handleClick = () => {};
 
+  const { header: headerConfig } = globalSetting;
+
   return (
     <indexStyles.GlobalLayoutsStyle>
       <Layout>
-        <Header
-          id="header"
-          style={{ position: 'fixed', zIndex: 1, width: '100%' }}
-        >
-          <div className="header-main-left">
-            <div className="header-logo">
-              <Image
-                height={32}
-                preview={false}
-                width={32}
-                src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-              />
-              <h1>自定义导航</h1>
-            </div>
-          </div>
-          <div className="header-main-center"></div>
-          <div className="header-main-right">
-            <Dropdown overlay={menu} placement="bottomRight">
-              <div className="user-card">
-                <div className="name">admin</div>
-                <Avatar size={32} icon={<UserOutlined />} />
+        {headerConfig ? (
+          <Header
+            id="header"
+            style={{ position: 'fixed', zIndex: 1, width: '100%' }}
+          >
+            <div className="header-main-left">
+              <div className="header-logo">
+                <Image
+                  height={32}
+                  preview={false}
+                  width={32}
+                  src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+                />
+                <h1>{headerConfig.name}</h1>
               </div>
-            </Dropdown>
-          </div>
-        </Header>
+            </div>
+            <div className="header-main-center"></div>
+            <div className="header-main-right">
+              {/* <Dropdown overlay={menu} placement="bottomRight">
+                  <div className="user-card">
+                    <div className="name">admin</div>
+                    <Avatar size={32} icon={<UserOutlined />} />
+                  </div>
+                </Dropdown> */}
+            </div>
+          </Header>
+        ) : null}
         <Content id="contentWrapper">{children}</Content>
         {/* <Footer>Footer</Footer> */}
       </Layout>
