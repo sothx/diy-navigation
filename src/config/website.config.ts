@@ -19,7 +19,7 @@ const websiteSet: websiteSetInterface = new Set();
  * 测试网站1
  */
 websiteSet.add({
-  name: '慕课网',
+  name: '慕课网1',
   icon: 'https://www.imooc.com/favicon.ico',
   href: 'https://www.imooc.com/',
 });
@@ -27,7 +27,7 @@ websiteSet.add({
  * 测试网站2
  */
 websiteSet.add({
-  name: '慕课网',
+  name: '慕课网2',
   icon: 'https://www.imooc.com/favicon.ico',
   href: 'https://www.imooc.com/',
 });
@@ -35,7 +35,7 @@ websiteSet.add({
  * 测试网站3
  */
 websiteSet.add({
-  name: '慕课网',
+  name: '慕课网3',
   icon: 'https://www.imooc.com/favicon.ico',
   href: 'https://www.imooc.com/',
 });
@@ -43,7 +43,7 @@ websiteSet.add({
  * 测试网站4
  */
 websiteSet.add({
-  name: '慕课网',
+  name: '慕课网4',
   icon: 'https://www.imooc.com/favicon.ico',
   href: 'https://www.imooc.com/',
 });
@@ -51,7 +51,7 @@ websiteSet.add({
  * 测试网站5
  */
 websiteSet.add({
-  name: '慕课网',
+  name: '慕课网5',
   icon: 'https://www.imooc.com/favicon.ico',
   href: 'https://www.imooc.com/',
 });

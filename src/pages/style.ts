@@ -8,7 +8,6 @@ export const MainContainer = styled.main`
   height: 100%;
   .serachInput {
     margin-top: 200px;
-    margin-bottom: 80px;
     padding: 18px 15px;
     border-radius: 10px;
     .ant-input-clear-icon {
@@ -20,7 +19,21 @@ export const MainContainer = styled.main`
   }
 `;
 
-export const WebsizeCardList = styled.div`
+export const CandidateWordCardList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  .card-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+  }
+  margin-bottom: 80px;
+`;
+
+export const WebsiteCardList = styled.div`
   display: flex;
   flex-wrap: wrap;
   /* justify-content:space-around; */

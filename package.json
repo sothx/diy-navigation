@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "@types/jsonp": "^0.2.0",
     "@types/styled-components": "^5.1.7",
     "@umijs/preset-react": "1.x",
     "axios": "^0.21.1",
