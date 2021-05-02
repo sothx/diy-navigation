@@ -52,7 +52,7 @@ export const globalSetting: globalSettingInterface = {
   /**
    * 是否在搜索框输入搜索词的同时，检索所有搜索站点
    */
-  searchWebsite: true,
+  searchWebsite: false,
   /**
    * 是否在搜索框输入搜索词的同时，展示对应搜索引擎的智能提示
    */
