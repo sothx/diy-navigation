@@ -55,7 +55,7 @@ export default function GlobalLayout({
                   height={32}
                   preview={false}
                   width={32}
-                  src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+                  src={headerConfig.icon}
                 />
                 <h1>{headerConfig.name}</h1>
               </div>
