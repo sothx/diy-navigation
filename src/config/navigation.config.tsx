@@ -11,6 +11,7 @@ interface globalSettingInterface {
   header?: headerInterface;
   bgImage?: string;
   searchWebsite: boolean;
+  showcandidateWord: boolean;
   searchEngine?: searchEngineInterface[];
 }
 interface headerInterface {
@@ -53,6 +54,10 @@ export const globalSetting: globalSettingInterface = {
    */
   searchWebsite: true,
   /**
+   * 是否在搜索框输入搜索词的同时，展示对应搜索引擎的智能提示
+   */
+  showcandidateWord: true,
+  /**
    * 搜索引擎配置
    * @param {string} name 名称
    * @param {string} icon 图标
@@ -89,7 +94,7 @@ export const globalSetting: globalSettingInterface = {
       },
     },
     {
-      name: '必应',
+      name: 'Bing',
       icon: {
         type: 'iconfont',
         name: 'iconBing',
@@ -115,10 +120,10 @@ export const globalSetting: globalSettingInterface = {
       },
     },
     {
-      name: '谷歌',
+      name: 'Google',
       icon: {
         type: 'ant-design',
-        name: GoogleOutlined,
+        name: () => <GoogleOutlined style={{ color: '#40a9ff' }} />,
       },
       searchUrl: async (searchValue: string) => {
         const url = `https://www.google.com.tw/search?q=${searchValue}`;
