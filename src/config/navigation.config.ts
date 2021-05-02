@@ -4,9 +4,7 @@
 import React from 'react';
 import bgImage from '@/assets/home/bg.jpg';
 import { GoogleOutlined } from '@ant-design/icons';
-/**
- * 存储导航网站的容器
- */
+import axios from 'axios';
 interface globalSettingInterface {
   iconfont: string;
   header?: headerInterface;
@@ -25,12 +23,8 @@ interface searchEngineInterface {
     type: 'iconfont' | 'ant-design';
     name: any;
   };
-  search: (
-    searchValue: string,
-  ) => {
-    searchUrl: string;
-    candidateWord: string[];
-  }; //搜索规则
+  searchUrl: (searchValue: string) => Promise<string>;
+  searchCandidateWord: (searchValue: string) => Promise<string[]>; //搜索规则
 }
 export const globalSetting: globalSettingInterface = {
   /**
@@ -72,13 +66,19 @@ export const globalSetting: globalSettingInterface = {
         type: 'iconfont',
         name: 'iconbaidu',
       },
-      search: async (searchValue: string) => {
-        const searchUrl = `https://www.baidu.com/s?wd=${searchValue}`;
-        const candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
-        return {
-          url: searchUrl,
-          candidateWord: [],
-        };
+      searchUrl: async (searchValue: string) => {
+        const url = `https://www.baidu.com/s?wd=${searchValue}`;
+        return url;
+      },
+      searchCandidateWord: async (searchValue: string) => {
+        let candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
+        let candidateWord: string[] = [];
+        try {
+          const candidateWordUrlResponse = await axios.get(candidateWordUrl);
+        } catch (e) {
+          candidateWord = [];
+        }
+        return candidateWord;
       },
     },
     {
@@ -87,9 +87,19 @@ export const globalSetting: globalSettingInterface = {
         type: 'iconfont',
         name: 'iconBing',
       },
-      search: (searchValue: string) => {
-        const searchUrl = `https://cn.bing.com/search?q=${searchValue}`;
-        return searchUrl;
+      searchUrl: async (searchValue: string) => {
+        const url = `https://cn.bing.com/search?q=${searchValue}`;
+        return url;
+      },
+      searchCandidateWord: async (searchValue: string) => {
+        let candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
+        let candidateWord: string[] = [];
+        try {
+          const candidateWordUrlResponse = await axios.get(candidateWordUrl);
+        } catch (e) {
+          candidateWord = [];
+        }
+        return candidateWord;
       },
     },
     {
@@ -98,9 +108,19 @@ export const globalSetting: globalSettingInterface = {
         type: 'ant-design',
         name: GoogleOutlined,
       },
-      search: (searchValue: string) => {
-        const searchUrl = `https://www.google.com.tw/search?q=${searchValue}`;
-        return searchUrl;
+      searchUrl: async (searchValue: string) => {
+        const url = `https://www.google.com.tw/search?q=${searchValue}`;
+        return url;
+      },
+      searchCandidateWord: async (searchValue: string) => {
+        let candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
+        let candidateWord: string[] = [];
+        try {
+          const candidateWordUrlResponse = await axios.get(candidateWordUrl);
+        } catch (e) {
+          candidateWord = [];
+        }
+        return candidateWord;
       },
     },
   ],
