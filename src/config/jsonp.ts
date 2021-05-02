@@ -9,7 +9,6 @@ export default (url: string, options: any) => {
         prefix: '',
       },
       (err, data) => {
-        console.log(data, err, '555');
         if (data) {
           resolve(data);
         } else {

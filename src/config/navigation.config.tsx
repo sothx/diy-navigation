@@ -111,7 +111,6 @@ export const globalSetting: globalSettingInterface = {
               Results[0].Suggests.map((v: any, i: number, a: any) => {
                 candidateWord.push(v.Txt);
               });
-              console.log(candidateWord, 'candidateWord');
               return candidateWord;
             } else {
               return [];
