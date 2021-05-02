@@ -171,7 +171,11 @@ const index = () => {
                 }}
                 className={`card-item`}
               >
-                <Avatar size={50} className="item-img" src={v.icon} />
+                <Avatar
+                  size={50}
+                  className={`item-img ${v.objectFit ? v.objectFit : 'cover'}`}
+                  src={v.icon}
+                />
                 <Text className="item-text">{v.name}</Text>
               </div>
             );
