@@ -24,6 +24,8 @@ import IconFont from '@/components/IconFont';
 
 import { globalSetting } from '../config/navigation.config';
 
+import { websiteList } from '../config/website.config';
+
 const { searchEngine } = globalSetting;
 
 const { Meta } = Card;
@@ -70,78 +72,14 @@ const index = () => {
           size="large"
         />
         <WebsizeCardList>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
-          <div className={`card-item`}>
-            <Avatar
-              size={50}
-              className="item-img"
-              src="https://www.imooc.com/favicon.ico"
-            />
-            <Text className="item-text">慕课网</Text>
-          </div>
+          {websiteList.map((v, i, a) => {
+            return (
+              <div className={`card-item`}>
+                <Avatar size={50} className="item-img" src={v.icon} />
+                <Text className="item-text">{v.name}</Text>
+              </div>
+            );
+          })}
         </WebsizeCardList>
       </MainContainer>
     </>

@@ -32,6 +32,7 @@ export const WebsizeCardList = styled.div`
     margin-right: calc(10% - 50px);
     margin-left: calc(10% - 50px);
     align-items: center;
+    cursor: pointer;
     /* align-items: center;
     margin-right:3%; */
     /* &:nth-child(5n){
