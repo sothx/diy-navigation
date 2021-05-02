@@ -22,6 +22,10 @@ import { GoogleOutlined, SearchOutlined } from '@ant-design/icons';
 
 import IconFont from '@/components/IconFont';
 
+import { globalSetting } from '../config/navigation.config';
+
+const { searchEngine } = globalSetting;
+
 const { Meta } = Card;
 
 const { Search } = Input;
@@ -33,18 +37,17 @@ const onSearch = (value) => console.log(value);
 const index = () => {
   const menu = (
     <Menu className="searchMenu">
-      <Menu.Item>
-        <IconFont type="iconBing" style={{ fontSize: '12px' }} />
-        Bing
-      </Menu.Item>
-      <Menu.Item>
-        <IconFont type="iconbaidu" style={{ fontSize: '12px' }} />
-        百度
-      </Menu.Item>
-      <Menu.Item>
-        <GoogleOutlined style={{ color: '#40a9ff' }} />
-        Google
-      </Menu.Item>
+      {searchEngine?.map((v, i, a) => {
+        return (
+          <Menu.Item>
+            {v.icon && v.icon.type === 'iconfont' ? (
+              <IconFont type={v.icon.name} style={{ fontSize: '12px' }} />
+            ) : null}
+            {v.icon && v.icon.type === 'ant-design' ? v.icon.name() : null}
+            {v.name}
+          </Menu.Item>
+        );
+      })}
     </Menu>
   );
 

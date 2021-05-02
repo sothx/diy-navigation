@@ -11,9 +11,10 @@ interface websiteAddInterface {
   href: string;
 }
 
-export const websiteSet: {
-  add: (value: websiteAddInterface) => Set<websiteAddInterface>;
-} = new Set();
+interface websiteSetInterface extends Set<any> {
+  add: (name: websiteAddInterface) => any;
+}
+const websiteSet: websiteSetInterface = new Set();
 /**
  * 测试网站1
  */
@@ -54,3 +55,8 @@ websiteSet.add({
   icon: 'https://www.imooc.com/favicon.ico',
   href: 'http://www.baidu.com',
 });
+
+/**
+ * 导出最终生成的站点列表
+ */
+export const websiteList = Array.from(websiteSet);
