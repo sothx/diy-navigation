@@ -21,7 +21,7 @@ const websiteSet: websiteSetInterface = new Set();
 websiteSet.add({
   name: '慕课网',
   icon: 'https://www.imooc.com/favicon.ico',
-  href: 'http://www.baidu.com',
+  href: 'https://www.imooc.com/',
 });
 /**
  * 测试网站2
@@ -29,7 +29,7 @@ websiteSet.add({
 websiteSet.add({
   name: '慕课网',
   icon: 'https://www.imooc.com/favicon.ico',
-  href: 'http://www.baidu.com',
+  href: 'https://www.imooc.com/',
 });
 /**
  * 测试网站3
@@ -37,7 +37,7 @@ websiteSet.add({
 websiteSet.add({
   name: '慕课网',
   icon: 'https://www.imooc.com/favicon.ico',
-  href: 'http://www.baidu.com',
+  href: 'https://www.imooc.com/',
 });
 /**
  * 测试网站4
@@ -45,7 +45,7 @@ websiteSet.add({
 websiteSet.add({
   name: '慕课网',
   icon: 'https://www.imooc.com/favicon.ico',
-  href: 'http://www.baidu.com',
+  href: 'https://www.imooc.com/',
 });
 /**
  * 测试网站5
@@ -53,7 +53,7 @@ websiteSet.add({
 websiteSet.add({
   name: '慕课网',
   icon: 'https://www.imooc.com/favicon.ico',
-  href: 'http://www.baidu.com',
+  href: 'https://www.imooc.com/',
 });
 
 /**

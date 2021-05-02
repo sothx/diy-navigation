@@ -41,7 +41,7 @@ const index = () => {
     <Menu className="searchMenu">
       {searchEngine?.map((v, i, a) => {
         return (
-          <Menu.Item>
+          <Menu.Item key={i}>
             {v.icon && v.icon.type === 'iconfont' ? (
               <IconFont type={v.icon.name} style={{ fontSize: '12px' }} />
             ) : null}
@@ -74,7 +74,13 @@ const index = () => {
         <WebsizeCardList>
           {websiteList.map((v, i, a) => {
             return (
-              <div className={`card-item`}>
+              <div
+                key={i}
+                onClick={() => {
+                  window.open(v.href);
+                }}
+                className={`card-item`}
+              >
                 <Avatar size={50} className="item-img" src={v.icon} />
                 <Text className="item-text">{v.name}</Text>
               </div>
