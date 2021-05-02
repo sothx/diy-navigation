@@ -22,7 +22,7 @@ import { globalSetting } from '../config/navigation.config';
 
 import { websiteList } from '../config/website.config';
 
-const { searchEngine, searchWebsite } = globalSetting;
+const { searchEngine, searchWebsite, name: websiteName } = globalSetting;
 
 const { Meta } = Card;
 
@@ -182,4 +182,5 @@ const index = () => {
   );
 };
 
+index.title = '自定义导航';
 export default index;
