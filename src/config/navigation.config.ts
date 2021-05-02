@@ -5,6 +5,7 @@ import React from 'react';
 import bgImage from '@/assets/home/bg.jpg';
 import { GoogleOutlined } from '@ant-design/icons';
 import axios from 'axios';
+import jsonpAdapter from 'axios-jsonp';
 interface globalSettingInterface {
   iconfont: string;
   header?: headerInterface;
@@ -57,7 +58,8 @@ export const globalSetting: globalSettingInterface = {
    * @param {string} icon 图标
    * @param {'iconfont' | 'ant-design'} icon.type 搜索引擎字体图标类型，只能是iconfont或ant-design
    * @param {*} icon.name 搜索引擎图标的名称，如果icon.type为iconfont,这里只能输入图标在iconfont图标库的名称,如果icon.type为ant-design，这里可以是ant-design内置图标的组件
-   * @param {*} search 搜索引擎的搜索配置
+   * @param {*} searchUrl 搜索引擎的搜索Url配置
+   * @param {*} searchCandidateWord 搜索引擎的搜索智能提示配置(需要使用JSONP)
    */
   searchEngine: [
     {
@@ -71,10 +73,15 @@ export const globalSetting: globalSettingInterface = {
         return url;
       },
       searchCandidateWord: async (searchValue: string) => {
-        let candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
+        const callback = 'callback';
+        let candidateWordUrl = `https://suggestion.baidu.com/su?wd=${searchValue}&cb=${callback}`;
         let candidateWord: string[] = [];
         try {
-          const candidateWordUrlResponse = await axios.get(candidateWordUrl);
+          const candidateWordUrlResponse: any = await axios({
+            url: candidateWordUrl,
+            adapter: jsonpAdapter,
+          });
+          candidateWord = candidateWordUrlResponse.s;
         } catch (e) {
           candidateWord = [];
         }
@@ -92,10 +99,15 @@ export const globalSetting: globalSettingInterface = {
         return url;
       },
       searchCandidateWord: async (searchValue: string) => {
-        let candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
+        const callback = 'callback';
+        let candidateWordUrl = `https://api.bing.com/qsonhs.aspx?type=cb&q=${searchValue}&cb=${callback}`;
         let candidateWord: string[] = [];
         try {
-          const candidateWordUrlResponse = await axios.get(candidateWordUrl);
+          const candidateWordUrlResponse: any = await axios({
+            url: candidateWordUrl,
+            adapter: jsonpAdapter,
+          });
+          candidateWord = [];
         } catch (e) {
           candidateWord = [];
         }
@@ -113,10 +125,15 @@ export const globalSetting: globalSettingInterface = {
         return url;
       },
       searchCandidateWord: async (searchValue: string) => {
-        let candidateWordUrl = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&wd=${searchValue}`;
+        const callback = 'callback';
+        let candidateWordUrl = `http://suggestqueries.google.com/complete/search?client=youtube&q=${searchValue}&jsonp=${callback}`;
         let candidateWord: string[] = [];
         try {
-          const candidateWordUrlResponse = await axios.get(candidateWordUrl);
+          const candidateWordUrlResponse: any = await axios({
+            url: candidateWordUrl,
+            adapter: jsonpAdapter,
+          });
+          candidateWord = [];
         } catch (e) {
           candidateWord = [];
         }

@@ -3,6 +3,7 @@ declare module '*.less';
 declare module '*.png';
 declare module '*.jpg';
 declare module '*.gif';
+declare module 'axios-jsonp';
 declare module '*.svg' {
   export function ReactComponent(
     props: React.SVGProps<SVGSVGElement>,
