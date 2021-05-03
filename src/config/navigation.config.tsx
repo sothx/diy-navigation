@@ -134,7 +134,7 @@ export const globalSetting: globalSettingInterface = {
         return url;
       },
       searchCandidateWord: async (searchValue: string) => {
-        let candidateWordUrl = `http://suggestqueries.google.com/complete/search?client=youtube&q=${searchValue}`;
+        let candidateWordUrl = `https://suggestqueries.google.com/complete/search?client=youtube&q=${searchValue}`;
         let candidateWord: string[] = [];
         const _jsonp: any = await jsonp(candidateWordUrl, {
           param: 'jsonp',
