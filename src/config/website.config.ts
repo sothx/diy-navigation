@@ -70,7 +70,6 @@ websiteSet.add({
 
 websiteSet.add({
   name: '新水浒Q传',
-  icon: 'https://xsh.changyou.com/favicon.ico',
   href: 'http://xsh.changyou.com/main.shtml',
   objectFit: 'none',
 });
