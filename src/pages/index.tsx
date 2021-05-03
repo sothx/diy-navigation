@@ -186,5 +186,5 @@ const index = () => {
   );
 };
 
-index.title = '自定义导航';
+index.title = '简洁导航';
 export default index;
