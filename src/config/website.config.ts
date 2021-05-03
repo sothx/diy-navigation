@@ -17,51 +17,48 @@ interface websiteSetInterface extends Set<any> {
   add: (name: websiteAddInterface) => any;
 }
 const websiteSet: websiteSetInterface = new Set();
-/**
- * 测试网站1
- */
-// websiteSet.add({
-//   name: '图灵社区',
-//   icon: 'https://www.ituring.com.cn/favicon.ico',
-//   href: 'https://www.ituring.com.cn/',
-//   objectFit: 'none',
-// });
-/**
- * 测试网站2
- */
-// websiteSet.add({
-//   name: '慕课网',
-//   icon: 'https://www.imooc.com/favicon.ico',
-//   href: 'https://www.imooc.com/',
-//   objectFit: 'cover',
-// });
-/**
- * 测试网站3
- */
-// websiteSet.add({
-//   name: '小米商城',
-//   icon: 'https://www.mi.com/favicon.ico',
-//   href: 'https://www.mi.com/',
-//   objectFit: 'none',
-// });
-/**
- * 测试网站4
- */
+
+websiteSet.add({
+  name: '掘金',
+  icon: 'https://juejin.cn/favicon.ico',
+  href: 'https://juejin.cn/',
+  objectFit: 'none',
+});
+
+websiteSet.add({
+  name: '图灵社区',
+  icon: 'https://www.ituring.com.cn/favicon.ico',
+  href: 'https://www.ituring.com.cn/',
+  objectFit: 'none',
+});
+
+websiteSet.add({
+  name: '百度贴吧',
+  icon: 'https://tb1.bdstatic.com/tb/favicon.ico',
+  href: 'https://tieba.baidu.com/',
+  objectFit: 'none',
+});
+
+websiteSet.add({
+  name: '微信公众平台',
+  icon: 'https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico',
+  href: 'https://mp.weixin.qq.com/',
+  objectFit: 'none',
+});
+
 // websiteSet.add({
 //   name: '掘金',
 //   icon: 'https://juejin.cn/favicon.ico',
 //   href: 'https://juejin.cn/',
 //   objectFit: 'none',
 // });
-/**
- * 测试网站5
- */
-// websiteSet.add({
-//   name: 'Umi.js',
-//   icon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
-//   href: 'https://umijs.org/',
-//   objectFit: 'none',
-// });
+
+websiteSet.add({
+  name: 'Umi.js',
+  icon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
+  href: 'https://umijs.org/',
+  objectFit: 'none',
+});
 
 /**
  * 导出最终生成的站点列表
