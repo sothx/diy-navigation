@@ -40,10 +40,10 @@ export const globalSetting: globalSettingInterface = {
    * @param {string} header.name 站点名称
    * @param {*} header.icon 站点图标(32px*32px)
    */
-  header: {
-    name: '自定义导航',
-    icon: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
-  },
+  // header: {
+  //   name: '自定义导航',
+  //   icon: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  // },
   /**
    * 背景图片配置
    * 如不需要背景图片可以直接注释掉这部分
