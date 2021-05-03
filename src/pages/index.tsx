@@ -172,7 +172,7 @@ const index = () => {
                 className={`card-item`}
               >
                 <Avatar
-                  size={50}
+                  size={40}
                   className={`item-img ${v.objectFit ? v.objectFit : 'cover'}`}
                   src={v.icon}
                 />

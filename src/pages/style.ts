@@ -53,6 +53,8 @@ export const WebsiteCardList = styled.div`
     } */
     .item-img {
       background-color: rgba(255, 255, 255, 0.7);
+      box-sizing: content-box;
+      border: 5px solid rgba(255, 255, 255, 0.1);
       margin-bottom: 10px;
       &.cover > img {
         object-fit: cover;
