@@ -30,7 +30,7 @@ export const CandidateWordCardList = styled.div`
     padding: 5px;
     margin: 10px;
   }
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 `;
 
 export const WebsiteCardList = styled.div`
