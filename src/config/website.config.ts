@@ -61,6 +61,20 @@ websiteSet.add({
   objectFit: 'cover',
 });
 
+websiteSet.add({
+  name: 'Jenkins-sothx',
+  icon: 'http://jenkins.sothx.com:8080/static/debcec2d/images/jenkins.svg',
+  href: 'http://jenkins.sothx.com:8080/',
+  objectFit: 'cover',
+});
+
+websiteSet.add({
+  name: '新水浒Q传',
+  icon: 'http://xsh.changyou.com/favicon.ico',
+  href: 'http://xsh.changyou.com/main.shtml',
+  objectFit: 'none',
+});
+
 /**
  * 导出最终生成的站点列表
  */
