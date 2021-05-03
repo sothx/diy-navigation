@@ -12,6 +12,7 @@ interface websiteAddInterface {
   icon?: string;
   href: string;
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
+  show?: 'pc' | 'mobile' | 'both';
 }
 
 interface websiteSetInterface extends Set<any> {
@@ -24,6 +25,7 @@ websiteSet.add({
   icon: 'https://juejin.cn/favicon.ico',
   href: 'https://juejin.cn/',
   objectFit: 'none',
+  show: 'pc',
 });
 
 websiteSet.add({
