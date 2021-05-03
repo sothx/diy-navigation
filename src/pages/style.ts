@@ -14,6 +14,7 @@ export const MainContainer = styled.main`
     border-radius: 10px;
     .ant-input-clear-icon {
       font-size: 15px;
+      padding-right: 10px;
     }
     .ant-input-prefix {
       padding-right: 15px;
