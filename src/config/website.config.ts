@@ -36,7 +36,7 @@ websiteSet.add({
   name: '百度贴吧',
   icon: 'https://tb1.bdstatic.com/tb/favicon.ico',
   href: 'https://tieba.baidu.com/',
-  objectFit: 'scale-down',
+  objectFit: 'cover',
 });
 
 websiteSet.add({
