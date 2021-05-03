@@ -4,7 +4,7 @@
  * @param {string} icon 网站图标
  * @param {string} href 网站地址
  * @param {'fill' | 'contain' | 'cover' | 'none' | 'scale-down'} objectFit 图标对齐方式,默认cover,参考https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit
- * @param {'pc' | 'mobile' | 'both'} show 图标展示的设备端，默认为pc
+ * @param {'pc' | 'mobile' | 'both'} device 图标展示的设备端，默认为pc
  * @returns {array}
  */
 interface websiteAddInterface {
@@ -12,7 +12,7 @@ interface websiteAddInterface {
   icon?: string;
   href: string;
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
-  show?: 'pc' | 'mobile' | 'both';
+  device?: 'pc' | 'mobile' | 'both';
 }
 
 interface websiteSetInterface extends Set<any> {
@@ -25,7 +25,7 @@ websiteSet.add({
   icon: 'https://juejin.cn/favicon.ico',
   href: 'https://juejin.cn/',
   objectFit: 'none',
-  show: 'pc',
+  device: 'pc',
 });
 
 websiteSet.add({
