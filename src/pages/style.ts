@@ -27,7 +27,7 @@ export const CandidateWordCardList = styled.div`
     background-color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     margin: 10px;
   }
   margin-bottom: 10px;
