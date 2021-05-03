@@ -74,6 +74,13 @@ websiteSet.add({
   objectFit: 'none',
 });
 
+websiteSet.add({
+  name: 'Ant Design',
+  href: 'https://ant.design/index-cn',
+  icon: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  objectFit: 'none',
+});
+
 /**
  * 导出最终生成的站点列表
  */
