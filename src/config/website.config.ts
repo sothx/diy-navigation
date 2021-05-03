@@ -4,11 +4,12 @@
  * @param {string} icon 网站图标
  * @param {string} href 网站地址
  * @param {'fill' | 'contain' | 'cover' | 'none' | 'scale-down'} objectFit 图标对齐方式,默认cover,参考https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit
+ * @param {'pc' | 'mobile' | 'both'} show 图标展示的设备端，默认为pc
  * @returns {array}
  */
 interface websiteAddInterface {
   name: string;
-  icon: string;
+  icon?: string;
   href: string;
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 }
@@ -51,6 +52,13 @@ websiteSet.add({
   icon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
   href: 'https://umijs.org/',
   objectFit: 'none',
+});
+
+websiteSet.add({
+  name: '清欢的博客',
+  icon: 'https://www.sothx.com/images/themes/Avatar.jpg',
+  href: 'https://www.sothx.com/',
+  objectFit: 'cover',
 });
 
 /**

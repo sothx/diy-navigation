@@ -4,7 +4,9 @@ export const MainContainer = styled.main`
   /* width:1300px; */
   width: 50%;
   min-width: 710px;
+  padding-bottom: 50px;
   margin: 0 auto;
+  position: relative;
   height: 100%;
   .serachInput {
     margin-top: 200px;
@@ -56,6 +58,8 @@ export const WebsiteCardList = styled.div`
       box-sizing: content-box;
       border: 5px solid rgba(255, 255, 255, 0.1);
       margin-bottom: 10px;
+      color: white;
+      text-shadow: 1px 1px 3px black;
       &.cover > img {
         object-fit: cover;
       }

@@ -14,7 +14,7 @@ import {
 
 import { MainContainer, WebsiteCardList, CandidateWordCardList } from './style';
 
-import { GoogleOutlined, SearchOutlined } from '@ant-design/icons';
+import { Html5TwoTone, SearchOutlined } from '@ant-design/icons';
 
 import IconFont from '@/components/IconFont';
 
@@ -174,8 +174,14 @@ const index = () => {
                 <Avatar
                   size={40}
                   className={`item-img ${v.objectFit ? v.objectFit : 'cover'}`}
-                  src={v.icon}
-                />
+                  src={
+                    v.icon ? (
+                      v.icon
+                    ) : (
+                      <Html5TwoTone style={{ fontSize: '20px' }} />
+                    )
+                  }
+                ></Avatar>
                 <Text className="item-text">{v.name}</Text>
               </div>
             );

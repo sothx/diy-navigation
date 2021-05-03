@@ -1,8 +1,19 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { globalSetting } from '../config/navigation.config';
 
 const bgImage = globalSetting.bgImage || '';
+
+export const GlobalStyle = createGlobalStyle`
+    body{
+      /* ${bgImage ? `background-image: url(${bgImage});` : null}
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+      height: 100%;
+      width: 100%; */
+    }
+`;
 
 export const GlobalLayoutsStyle = styled.div`
   width: 100%;
@@ -11,7 +22,9 @@ export const GlobalLayoutsStyle = styled.div`
     ${bgImage ? `background-image: url(${bgImage});` : null}
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    background-attachment: fixed;
+    min-height: 100%;
+    height: auto;
     width: 100%;
   }
   #header {

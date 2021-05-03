@@ -43,6 +43,7 @@ export default function GlobalLayout({
 
   return (
     <indexStyles.GlobalLayoutsStyle>
+      <indexStyles.GlobalStyle></indexStyles.GlobalStyle>
       <Layout>
         {headerConfig ? (
           <Header
