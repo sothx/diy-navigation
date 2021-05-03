@@ -63,14 +63,14 @@ websiteSet.add({
 
 websiteSet.add({
   name: 'Jenkins-sothx',
-  icon: 'http://jenkins.sothx.com:8080/static/debcec2d/images/jenkins.svg',
+  icon: 'https://www.jenkins.io/favicon.ico',
   href: 'http://jenkins.sothx.com:8080/',
   objectFit: 'cover',
 });
 
 websiteSet.add({
   name: '新水浒Q传',
-  icon: 'http://xsh.changyou.com/favicon.ico',
+  icon: 'https://xsh.changyou.com/favicon.ico',
   href: 'http://xsh.changyou.com/main.shtml',
   objectFit: 'none',
 });
