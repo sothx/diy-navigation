@@ -21,6 +21,7 @@ export const GlobalLayoutsStyle = styled.div`
   .ant-layout {
     ${bgImage ? `background-image: url(${bgImage});` : null}
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100%;
